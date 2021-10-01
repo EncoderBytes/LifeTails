@@ -246,6 +246,18 @@ main button:hover{
 .post-title button:hover{
     transform: scale(1.05);
 }
+.createPost button a{
+    color: #fff;
+}
+.createPost button{
+    width: 20rem;
+    font-size: 20px;
+    font-family: var(--lexend);
+    padding: 1rem;
+    background-color: var(--sky);
+    border: none;
+}
+
 .catagory{
     margin-top: 100px;
     font-family: var(--josefin);
@@ -368,7 +380,7 @@ main button:hover{
     text-align: center;
 }
 .tag{
-    padding: 10px;
+    padding: 0.6rem;
     background-color: var(--sky);
     margin: 5px 5px;
     color: #fff;

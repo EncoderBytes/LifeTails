@@ -139,26 +139,7 @@
                         </div>
                         <a href="#">Now Is The Time For You To Know The Truth About Politics.</a>
                     </div>
-                    <div class="recentpost-title">
-                        <div class="recentpost-img">
-                            <img src="../assets/popular-post/m-blog-1.jpg" alt="">
-                            <div class="recentpost-info">
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021&nbsp;&nbsp;</span>
-                                <span>2 Comments</span>
-                            </div>
-                        </div>
-                        <a href="#">Now Is The Time For You To Know The Truth About Politics.</a>
-                    </div>
-                    <div class="recentpost-title">
-                        <div class="recentpost-img">
-                            <img src="../assets/popular-post/m-blog-1.jpg" alt="">
-                            <div class="recentpost-info">
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021&nbsp;&nbsp;</span>
-                                <span>2 Comments</span>
-                            </div>
-                        </div>
-                        <a href="#">Now Is The Time For You To Know The Truth About Politics.</a>
-                    </div>
+
             </div>
 
             <div class="mostview">

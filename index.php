@@ -15,7 +15,7 @@
         <!-- style links for owl carosel below -->
         <link rel="stylesheet" href="styles/owl.carousel.min.css">
         <link rel="stylesheet" href="styles/owl.theme.default.min.css">
-        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/style.css" type="text/css">
     <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css"> -->
 
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                         <div class="post-title">
-                            <a href="blogpost/blogpost.php">Now Is The Time For You To Know The Truth About Politics.</a>
+                            <a href="blogpost/blogpost.php" target="_blank">Now Is The Time For You To Know The Truth About Politics.</a>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Eius non unde ipsam libero quidem itaque sapiente officiis 
                                 veritatis natus quis ex accusantium consectetur dolorem dolorum, 
@@ -101,73 +101,9 @@
                         </div>
                         <hr>
                     </div>
-                    <div class="postContent">
-                        <div class="postImg">
-                            <div class="img">
-                            <img src="assets/Blog-post/blog4.png" alt="">
-                            </div>
-                            <div class="postInfo">
-                                <span><i class="fas fa-user text-grey"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021</span>
-                                <span>2 Comments</span>
-                            </div>
-                        </div>
-                        <div class="post-title">
-                            <a href="#">Now Is The Time For You To Know The Truth About Politics.</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eius non unde ipsam libero quidem itaque sapiente officiis 
-                                veritatis natus quis ex accusantium consectetur dolorem dolorum, 
-                                Eius non unde ipsam libero quidem itaque sapiente officiis 
-                                veritatis natus quis ex accusantium consectetur dolorem dolorum, 
-                                corporis ut facere doloribus. Cum.</p>
-                                <button>Read More</button>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="postContent">
-                        <div class="postImg">
-                            <div class="img">
-                            <img src="assets/Blog-post/blog2.png" alt="">
-                            </div>
-                            <div class="postInfo">
-                                <span><i class="fas fa-user text-grey"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021</span>
-                                <span>2 Comments</span>
-                            </div>
-                        </div>
-                        <div class="post-title">
-                            <a href="#">Now Is The Time For You To Know The Truth About Politics.</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eius non unde ipsam libero quidem itaque sapiente officiis 
-                                veritatis natus quis ex accusantium consectetur dolorem dolorum, 
-                                Eius non unde ipsam libero quidem itaque sapiente officiis 
-                                veritatis natus quis ex accusantium consectetur dolorem dolorum, 
-                                corporis ut facere doloribus. Cum.</p>
-                                <button>Read More</button>
-                        </div>
-                        <hr>
-                    </div>
-                    <div class="postContent">
-                        <div class="postImg">
-                            <div class="img">
-                            <img src="assets/Blog-post/blog3.png" alt="">
-                            </div>
-                            <div class="postInfo">
-                                <span><i class="fas fa-user text-grey"></i>&nbsp;&nbsp;Admin</span>
-                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021</span>
-                                <span>2 Comments</span>
-                            </div>
-                        </div>
-                        <div class="post-title">
-                            <a href="#">Now Is The Time For You To Know The Truth About Politics.</a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eius non unde ipsam libero quidem itaque sapiente officiis 
-                                veritatis natus quis ex accusantium consectetur dolorem dolorum, 
-                                Eius non unde ipsam libero quidem itaque sapiente officiis 
-                                veritatis natus quis ex accusantium consectetur dolorem dolorum, 
-                                corporis ut facere doloribus. Cum.</p>
-                                <button>Read More</button>
-                        </div>
+                    <!-- create your own blog -->
+                    <div class="createPost">
+                    <button><a href="../blogpost/createBlog.php">Create your Own Blog</a></button>
                     </div>
                 </div>
                 <aside class="sidebar">
@@ -201,7 +137,7 @@
 
                     <!-- popular posts are below -->
                     <div class="popularPost">
-                        <h1>Popular Post</h1>
+                        <h1>Popular Posts</h1>
                         <div class="popularPost-content">
                             <div class="popularPost-img">
                                 <div class="popularImage">
@@ -216,62 +152,7 @@
                                 <a href="#">New data recording system to better analyse road accidents</a>
                             </div>
                         </div>
-                        <div class="popularPost-content">
-                            <div class="popularPost-img">
-                                <div class="popularImage">
-                                    <img src="assets/popular-post/m-blog-2.jpg" alt="">    
-                                </div>
-                                <div class="popularPost-info">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021&nbsp;&nbsp;</span>
-                                    <span>2 Comments</span>
-                                </div>
-                            </div>
-                            <div class="popularPost-title">
-                                <a href="#">New data recording system to better analyse road accidents</a>
-                            </div>
-                        </div>
-                        <div class="popularPost-content">
-                            <div class="popularPost-img">
-                                <div class="popularImage">
-                                    <img src="assets/popular-post/m-blog-3.jpg" alt="">    
-                                </div>
-                                <div class="popularPost-info">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021&nbsp;&nbsp;</span>
-                                    <span>2 Comments</span>
-                                </div>
-                            </div>
-                            <div class="popularPost-title">
-                                <a href="#">New data recording system to better analyse road accidents</a>
-                            </div>
-                        </div>
-                        <div class="popularPost-content">
-                            <div class="popularPost-img">
-                                <div class="popularImage">
-                                    <img src="assets/popular-post/m-blog-4.jpg" alt="">    
-                                </div>
-                                <div class="popularPost-info">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021&nbsp;&nbsp;</span>
-                                    <span>2 Comments</span>
-                                </div>
-                            </div>
-                            <div class="popularPost-title">
-                                <a href="#">New data recording system to better analyse road accidents</a>
-                            </div>
-                        </div>
-                        <div class="popularPost-content">
-                            <div class="popularPost-img">
-                                <div class="popularImage">
-                                    <img src="assets/popular-post/m-blog-5.jpg" alt="">    
-                                </div>
-                                <div class="popularPost-info">
-                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021&nbsp;&nbsp;</span>
-                                    <span>2 Comments</span>
-                                </div>
-                            </div>
-                            <div class="popularPost-title">
-                                <a href="#">New data recording system to better analyse road accidents</a>
-                            </div>
-                        </div>
+
                     </div>
                     <!-- popular posts ended here -->
                     
@@ -285,6 +166,7 @@
                             <button>Subscribe</button>
                         </div>
                     </div>
+                    <!-- newsLetter ended here -->
                     <!-- newsLetter ended here -->
 
                     <!-- popular Tags starts from here -->
