@@ -1,0 +1,78 @@
+
+.postpublished{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 10px 60px;
+}
+.postpublished-title{
+    font-family: var(--abelFonts);
+}
+.postpublished-info{
+    font-size: 12px;
+    padding-bottom: 5px;
+    color:var(--text-grey);
+}
+.postpublished-img> img{
+object-fit: cover;
+width: 100%;
+}
+.postpublished-content{
+    font-family: var(--abelFonts);
+}
+.postpublished-content h4{
+    font-family: var(--lexend);
+}
+
+/* aside starts form here */
+aside{
+    margin-top: 100px;
+    padding-left: 60px;
+    
+}
+.recentposts{
+    font-family: var(--josefin);
+}
+.recentpost-img{
+      position: relative;
+}
+.recentpost-img>img{
+    object-fit: cover;
+    width: 100%;
+}
+.recentpost-info{
+    position: absolute;
+    padding: 8px;
+    left: 0;
+    bottom: -5px;
+    background-color: #fff;
+    color: var(--text-grey);
+    font-family: var(--abelFonts);
+    font-size: 14px;
+}
+.recentpost-title{
+    margin-bottom: 50px;
+
+}
+.recentpost-title a{
+    font-family: var(--anton);
+    color: var(--text-grey);
+}
+/* most view tags */
+.mostview{
+    font-family: var(--josefin);
+}
+.mostview-tags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    text-align: center;}
+.mostview-tag{
+    padding: 10px;
+    background-color: var(--sky);
+    margin: 5px 5px;
+    color: #fff;
+    font-weight: 200;
+    font-family: var(--abelFonts);
+    border-radius: 10px;
+}
