@@ -1,0 +1,57 @@
+:root{
+     /* colors variables */
+     --text-grey: #3f4954;
+     --text-light:#686666da;
+     --bg-color: #0f0f0f;
+     --white:#ffffff;
+     --mid-night: #104f55;
+ 
+         /* gradient color   */
+         --sky: #034b4b;
+ 
+ 
+     /* text fonts variables */
+     --abelFonts:'Abel', sans-serif;
+     --anton: 'Anton', sans-serif;
+     --josefin: 'Josefin Sans', sans-serif;
+     --lexend: 'Lexend', sans-serif;
+}
+.createPost h1{
+    font-family: var(--lexend);
+    background-color: rgb(20, 18, 18);
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+}
+.createPost h2{
+    background-color: var(--text-grey);
+    color: #ffffff;
+    padding: 0.6rem;
+}
+.createPost-content{
+    margin: 5rem 10rem;
+    font-family: var(--lexend);
+}
+.createPost-img{
+    font-family: var(--lexend);
+    margin-bottom: 10px;
+}
+.createPost-img input{
+    font-family: var(--lexend);
+}
+input[type=file]::file-selector-button {
+    border: none;
+    width: 10rem;
+    padding: 0.5rem;
+    font-family: var(--lexend);
+    background-color: var(--sky);
+    color: #ffffff;
+    transition: 1s;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background-color: #3f7272;
+  }
+.createPost-title{
+    font-family: var(--lexend);
+}

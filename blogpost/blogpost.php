@@ -20,11 +20,11 @@
     <nav>
         <div class="nav-menu flex-row">
             <div class="nav-brand">
-                <a href="#">LifeTails</a>
+                <a href="../index.php">LifeTails</a>
             </div>
             <ul class="nav-items">
                 <li class="nav-links">
-                    <a href="#">Home</a>
+                    <a href="../index.php">Home</a>
                 </li>
                 <li class="nav-links">
                     <a href="#">Catagory</a>
