@@ -81,11 +81,6 @@ include('database/config.php');
     <!-- section3 division below-->
 
     <?php
-    // include('database/config.php');
-    $conn = new mysqli("localhost", "root", "", "life_tails");
-
-    // Check connection
-    
         $sql = "SELECT * FROM blog_post";
         $query = mysqli_query($conn, $sql);
     ?>
@@ -99,8 +94,9 @@ include('database/config.php');
                     <div class="postContent">
                         <div class="postImg">
                             <div class="img">
-                                <img src="assets/Blog-post/blog1.png" alt="">
+                            <img src="<?php echo 'image/' . $q['img'] ?>" alt="">
                             </div>
+
                             <div class="postInfo">
                                 <span><i class="fas fa-user text-grey"></i>&nbsp;&nbsp;Admin</span>
                                 <span name = "p_info"><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;<?php echo $q['info']; ?></span>
@@ -108,8 +104,14 @@ include('database/config.php');
                             </div>
                         </div>
                         <div class="post-title">
-                            <a href="blogpost/blogpost.php" name="p_title" target="_blank"><?php echo $q['title']; ?></a>
-                            <p name="p_content"><?php echo $q['content']; ?></p>
+                            <a href="blogpost/blogpost.php" name="p_title" target="_blank"><?php echo $q['title'];?>                                                   </a>
+     
+                            <p name="p_content"><?php
+                                                   
+                                                    echo $q['content'];
+                                                    // print_r($q);
+                                                 ?>
+                            </p>
                             <button>Read More</button>
                         </div>
                         <hr>

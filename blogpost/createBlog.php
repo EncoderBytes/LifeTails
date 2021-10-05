@@ -5,6 +5,45 @@ include "../database/config.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php
+if(isset($_POST['upload_post'])){
+    
+    $info = $_REQUEST['p_info'];
+    $title = $_REQUEST['p_title'];
+    $content = $_REQUEST['p_content'];
+
+    //image uploading procedure
+
+    // $img = $_FILES['upload'];
+    $filename = $_FILES["upload"]["name"];
+    $folder_dir = "../image/";
+    if($filename !=''){
+        $folder_file = $folder_dir.basename($_FILES['upload']['name']); 
+        //extention
+        $extention = strtolower(pathinfo($folder_file, PATHINFO_EXTENSION));
+        // print_r(($extention));
+        $extention_arr = array("jpg", "png", "jpeg");
+        // print_r($extention_arr);
+        if(in_array($extention, $extention_arr)){
+            // conert to base64
+            $image_base64 = base64_encode(file_get_contents($_FILES['upload']['tmp_name']));
+            $image = "data::image/".$extention.";base64,".$image_base64;
+            // print_r($image);
+            if(move_uploaded_file($_FILES['upload']['tmp_name'], $folder_file)){
+
+                $insert =  "INSERT INTO blog_post(img, info, title,  content) values ('$filename', '$info', '$title', '$content')";
+                mysqli_query($conn, $insert);
+            }
+                
+        }
+        
+    }
+    
+    header("Location: ../index.php");
+    exit(0);
+}
+?>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,14 +91,13 @@ include "../database/config.php";
         </div>
     </nav> <hr>
     <!-- creating a post -->
-    <form action="" method="POST">
-         <div class="createPost">
+    <form class="createPost" action="" method="POST" enctype="multipart/form-data">
             <h1>Post your LifeTails</h1>
             <div class="createPost-content">
                 <div class="createPost-title">
                     <div class="createPost-img">
                         <h2>Upload your Image</h2>
-                        <input name="p_image" type="file">
+                        <input name="upload" type="file">
                     </div>
                     <div class="createPost-info">
                         <input name="p_info" type="date">
@@ -71,7 +109,6 @@ include "../database/config.php";
                 <textarea name="p_content" id="" cols="40" rows="2"></textarea>
             </div>
             <button name="upload_post">upload</button>
-         </div>
     </form>
 
 
