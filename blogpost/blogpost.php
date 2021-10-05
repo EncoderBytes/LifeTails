@@ -5,7 +5,7 @@
         // $single_query = mysqli_num_rows($query);
         // print_r($single_query);
         $row =  mysqli_fetch_assoc($query);
-        print_r($row);
+        // print_r($row);
 ?>
 <!DOCTYPE html>
 <html lang="en">
