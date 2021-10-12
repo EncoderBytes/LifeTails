@@ -76,3 +76,74 @@ aside{
     font-family: var(--abelFonts);
     border-radius: 10px;
 }
+.comments-wrapper{
+    border: .2px solid gray;
+    border-bottom: none;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+}
+.comments-wrapper h1{
+    font-family: var(--abelFonts);
+    /* border: 1px solid red; */
+}
+.throwComment{
+    display: grid;
+    grid-template-columns: 200px 10px;
+    font-family: var(--abelFonts);
+}
+.addComment input{
+    font-family: var(--abelFonts);
+    padding: 0.8rem;
+    width: 15rem;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.addComment input:focus{
+    outline: none;
+}
+.postComment button{
+    font-family: var(--abelFonts);
+    padding: 0.9rem;
+    width: 5rem;
+    margin-left:80px ;
+    background-color: var(--sky);
+    font-size: 15px;
+    margin-bottom: 25px;
+    color: white;
+    border: none;
+}
+
+.comments{
+    display: grid;
+    grid-template-columns: 50px 500px;
+    grid-template-areas: "img name" "comments comments";
+    align-items: center;
+    font-family: var(--abelFonts);
+}   
+.userImg{
+    grid-area: img;
+    /* border: 1px solid red; */
+}
+.userImg img{
+    border-radius: 20%;
+    object-fit: cover;
+    width: 100%;
+}
+.userName{
+    grid-area: name;
+    padding-left: 20px;
+    color: var(--text-grey);
+}
+.userName h2{
+    margin: 20px 0;
+}
+.userComment{
+    /* border: 1px solid red;   */
+    grid-area: comments;
+}
+.userComment p{
+    margin: 0;
+    color: var(--text-grey);
+
+}

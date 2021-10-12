@@ -52,9 +52,19 @@ if(isset($_POST['upload_post'])){
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,400&family=Lexend:wght@100;200;300;400;500&display=swap" rel="stylesheet">
-    
-        <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/createpost-style.css">
+    <script src="https://cdn.tiny.cloud/1/wthzqzaywk70trgl6d5wc9h3cdia2dhu3v6guvnjzvolv2v7/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/createpost-style.css">
+    <script>
+    tinymce.init({
+      selector: '#editor',
+      plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+   });
+  </script>
 
 
     <title>LifeTails</title>
@@ -103,10 +113,10 @@ if(isset($_POST['upload_post'])){
                         <input name="p_info" type="date">
                     </div>
                     <h2>Add your Post title</h2>
-                    <textarea name="p_title" id="" cols="40" rows="2"></textarea>
+                    <textarea  name="p_title" id="" cols="40" rows="2"></textarea>
                 </div>
                 <h2>Add your Post Content</h2>
-                <textarea name="p_content" id="" cols="40" rows="2"></textarea>
+                <textarea id="editor" name="p_content" id="" cols="40" rows="2"></textarea>
             </div>
             <button name="upload_post">upload</button>
     </form>

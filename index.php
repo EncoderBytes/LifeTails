@@ -1,6 +1,7 @@
 <?php
 include('database/config.php');
 // include "blogpost/createBlog.php"
+static $pid = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,6 +84,16 @@ include('database/config.php');
     <?php
         $sql = "SELECT * FROM blog_post";
         $query = mysqli_query($conn, $sql);
+
+        
+        // $data = array();
+        // if(mysqli_num_rows($query)>0){
+        //     while($row = mysqli_fetch_assoc($query)){
+        //         $data[] = $row['id'];
+        //     }
+        // }
+        // print_r($data[4]);
+        
     ?>
     <div class="section3">
         <div class="siteContent">
@@ -104,22 +115,21 @@ include('database/config.php');
                             </div>
                         </div>
                         <div class="post-title">
-                            <a href="blogpost/blogpost.php" name="p_title" target="_blank"><?php echo $q['title'];?>                                                   </a>
+                            <a href="" name="p_title" target="_blank"><?php echo $q['title'];?>                                                   </a>
      
                             <p name="p_content"><?php
-                                                   
-                                                    echo $q['content'];
-                                                    // print_r($q);
+                                                    echo substr($q['content'],0,250);
                                                  ?>
                             </p>
-                            <button>Read More</button>
+                            <button name="btn"><?php echo "<a href='blogpost/blogpost.php?id=".$q['id']."' >Read More</a>"?></button>
                         </div>
                         <hr>
                     </div>
 
                 <?php
-                }
-                ?>
+            }
+           
+            ?>
                 <!-- create your own blog -->
                 <div class="createPost">
                     <button><a href="blogpost/createBlog.php">Create your Own Blog</a></button>
@@ -214,30 +224,27 @@ include('database/config.php');
         <div class="container">
             <h1>Trending Topics</h1>
             <div class="owl-carousel owl-theme blog-post">
+                <?php
+                $sql = "SELECT * FROM blog_post";
+                $query = mysqli_query($conn, $sql);
+                $views = array();
+                 if(mysqli_num_rows($query)>0){
+                     while($value = mysqli_fetch_assoc($query)){
+                         $views[] = $value['view'];
+                     }
+                 } 
+                //  print_r($views);
+                foreach($query as $q){?>                
                 <div class="blog-content">
-                    <img src="assets/Blog-post/post-7.jpg" alt="">
-                    <h3>London world most currupt City</h3>
-                    <button class="btn btn-blog">Politics</button>
+                <img src="<?php echo 'image/' . $q['img'] ?>" alt="">
+                    <h3><?php echo $q['title'] ?></h3>
+                    <button class="btn btn-blog"><?php echo "<a href='blogpost/blogpost.php?id=".$q['id']."' >Politics</a>"?></button>
                     <span>2 minutes ago</span>
-                </div>
-                <div class="blog-content">
-                    <img src="assets/Blog-post/post-7.jpg" alt="">
-                    <h3>London world most currupt City</h3>
-                    <button class="btn btn-blog">Politics</button>
-                    <span>2 minutes ago</span>
-                </div>
-                <div class="blog-content">
-                    <img src="assets/Blog-post/post-7.jpg" alt="">
-                    <h3>London world most currupt City</h3>
-                    <button class="btn btn-blog">Politics</button>
-                    <span>2 minutes ago</span>
-                </div>
-                <div class="blog-content">
-                    <img src="assets/Blog-post/post-7.jpg" alt="">
-                    <h3>London world most currupt City</h3>
-                    <button class="btn btn-blog">Politics</button>
-                    <span>2 minutes ago</span>
-                </div>
+                </div>                
+                
+                <?php
+        }
+            ?>
             </div>
         </div>
     </div>

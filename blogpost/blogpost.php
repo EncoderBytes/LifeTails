@@ -1,12 +1,36 @@
 <?php
-        include('../database/config.php');
+        include('../database/config.php'); 
+        // include('../styles/blogpost-style.css'); 
         $sql = "SELECT * FROM blog_post";
+
+        $id = $_GET['id'];
+        // print_r($id);
+
         $query = mysqli_query($conn, $sql);
-        // $single_query = mysqli_num_rows($query);
-        // print_r($single_query);
-        $row =  mysqli_fetch_assoc($query);
+        // print_r($query);
+        $lengthOfQuery = mysqli_num_rows($query);
+        // print_r($lengthOfQuery);
+        for($i=0; $i<$lengthOfQuery; $i++){
+            $row =  mysqli_fetch_array($query);
+            if ($id == $row['id'])
+             break;
+        }
         // print_r($row);
 ?>
+<?php
+
+            // $conn = new mysqli("localhost","root","","life_tails");
+            include('../database/config.php'); 
+        if(isset($_POST['post'])){
+        $input = $_REQUEST['add_comment'];
+    
+        $insert =  "INSERT INTO comments (comment) VALUES ('$input')";
+        mysqli_query($conn, $insert);
+    }
+    // print_r($result);
+    $sql = "SELECT * FROM comments";
+    $query = mysqli_query($conn, $sql);
+            ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +38,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9f56dfd8f1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tiny.cloud/1/wthzqzaywk70trgl6d5wc9h3cdia2dhu3v6guvnjzvolv2v7/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,400&family=Lexend:wght@100;200;300;400;500&display=swap" rel="stylesheet">
     
-        <link rel="stylesheet" href="../styles/style.css">
-        <link rel="stylesheet" href="../styles/blogpost-style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/blogpost-main.css">
+    <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'a11ychecker advcode casechange export formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter pageembed permanentpen table',
+      toolbar_mode: 'floating',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+   });
+  </script>
+
 
 
     <title>LifeTails</title>
@@ -78,6 +114,34 @@
                     <?php echo $row['content']?>
                 </p>
     
+            </div>
+            <div class="comments-wrapper">
+                <h1>Throw your comments</h1>
+            <form action="" method="POST">
+            <div class="throwComment">
+                <div class="addComment">
+                    <input type="text" name="add_comment" placeholder="What are your thoughts">
+                </div>
+                <div class="postComment">
+                    <button name="post">Post</button>
+                </div>
+            </div>
+            </form>
+            <?php foreach($query as $q){?> 
+            <div class="comments">
+                <div class="userImg">   
+                    <img src="../assets/x.jpg" alt="">
+                </div>
+                <div class="userName">
+                    <h2>Asanaid Ahmad</h2></h2>
+                </div>
+                <div class="userComment">
+                    <p><?php echo $q['comment'] ?></p>
+                </div>
+            </div><hr>
+            <?php
+            }
+            ?>
             </div>
         </div>
         
