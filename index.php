@@ -23,7 +23,7 @@ static $pid = 0;
     <link rel="stylesheet" href="styles/owl.theme.default.min.css">
     <link rel="stylesheet" href="styles/style.css" type="text/css">
     <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css"> -->
+    <link rel="sty  lesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css"> -->
 
     <title>LifeTails</title>
 </head>
@@ -31,14 +31,14 @@ static $pid = 0;
 <body>
     <nav>
         <div class="nav-menu flex-row">
-            <div class="nav-brand">
-                <a href="index.php">LifeTails</a>
-            </div>
-            <!-- <div class="toggle-collapse">
+            <div class="toggle-collapse">
                 <div class="toggle-icon">
                     <i class="fas fa-bars"></i>
                 </div>
-            </div> -->
+            </div>
+            <div class="nav-brand">
+                <a href="index.php">LifeTails</a>
+            </div>
             <ul class="nav-items">
                 <li class="nav-links">
                     <a href="#">Home</a>
@@ -48,9 +48,6 @@ static $pid = 0;
                 </li>
                 <li class="nav-links">
                     <a href="#">Archives</a>
-                </li>
-                <li class="nav-links">
-                    <a href="#">Pages</a>
                 </li>
                 <li class="nav-links">
                     <a href="#">Contact us</a>
@@ -65,11 +62,7 @@ static $pid = 0;
         </div>
     </nav>
     <!-- there is the end of navbar  -->
-    <main style="background: url('assets/Background-image.png');
-     background-repeat: no-repeat;
-     background-size: cover;
-     color: white;
-     height: 125vh;">
+    <div class="main-cover">
         <section>
             <div class="main-text">
                 <h2>Tour & Travel</h2>
@@ -77,7 +70,7 @@ static $pid = 0;
                 <button>Explore</button>
             </div>
         </section>
-    </main>
+    </div>
 
     <!-- section3 division below-->
 
@@ -123,7 +116,6 @@ static $pid = 0;
                             </p>
                             <button name="btn"><?php echo "<a href='blogpost/blogpost.php?id=".$q['id']."' >Read More</a>"?></button>
                         </div>
-                        <hr>
                     </div>
 
                 <?php
@@ -181,22 +173,37 @@ static $pid = 0;
                             <a href="#">New data recording system to better analyse road accidents</a>
                         </div>
                     </div>
+                    <div class="popularPost-content">
+                        <div class="popularPost-img">
+                            <div class="popularImage">
+                                <img src="assets/popular-post/m-blog-1.jpg" alt="">
+                            </div>
+                            <div class="popularPost-info">
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021&nbsp;&nbsp;</span>
+                                <span>2 Comments</span>
+                            </div>
+                        </div>
+                        <div class="popularPost-title">
+                            <a href="#">New data recording system to better analyse road accidents</a>
+                        </div>
+                    </div>
+                    <div class="popularPost-content">
+                        <div class="popularPost-img">
+                            <div class="popularImage">
+                                <img src="assets/popular-post/m-blog-1.jpg" alt="">
+                            </div>
+                            <div class="popularPost-info">
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;September 27, 2021&nbsp;&nbsp;</span>
+                                <span>2 Comments</span>
+                            </div>
+                        </div>
+                        <div class="popularPost-title">
+                            <a href="#">New data recording system to better analyse road accidents</a>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- popular posts ended here -->
-
-                <!-- newletter starts from here -->
-                <div class="newsLetter">
-                    <h1>Newsletter</h1>
-                    <div class="newsLetter-input">
-                        <input type="email" placeholder="Type your email here">
-                    </div>
-                    <div class="newsLetter-btn">
-                        <button>Subscribe</button>
-                    </div>
-                </div>
-                <!-- newsLetter ended here -->
-                <!-- newsLetter ended here -->
 
                 <!-- popular Tags starts from here -->
                 <div class="popularTags">
@@ -215,6 +222,18 @@ static $pid = 0;
                         <span class="tag">Politics</span>
                     </div>
                 </div>
+                <!-- newletter starts from here -->
+                <div class="newsLetter">
+                    <h1>Newsletter</h1>
+                    <div class="newsLetter-input">
+                        <input type="email" placeholder="Type your email here">
+                    </div>
+                    <div class="newsLetter-btn">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+                <!-- newsLetter ended here -->
+                <!-- newsLetter ended here -->  
             </aside>
         </div>
     </div>

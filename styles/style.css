@@ -7,7 +7,9 @@
     --mid-night: #104f55;
 
         /* gradient color   */
-        --sky: #034b4b;
+     
+    /* --sky:  rgb(247, 95, 95); */
+    --sky: #4390AC;
 
 
     /* text fonts variables */
@@ -31,7 +33,6 @@ a{
     text-decoration: none;
 }
 nav{
-    /* background-color: red; */
     width: 100%;
     color: var(--text-grey);
 
@@ -66,7 +67,7 @@ nav{
     color: var(--text-grey);
 }
 .nav-links:hover{
-    background-color: var(--mid-night);
+    background-color: var(--sky);
 }
 .nav-links:hover a{
     color: white;
@@ -78,46 +79,65 @@ nav{
     color: var(--text-grey);
     padding: 0rem 0.2rem;
 }
+.toggle-collapse{
+    position: absolute;
+    right: 4%;
+    top: 3%;
+    display: none;
+}
  /* end of styling for Navbar */
 
- main{
-     /* background-color: yellowgreen; */
-     background: url('assets/Background-image.png');
-     background-repeat: no-repeat;
-     background-size: cover;
-     color: white;
-     height: 110vh;
+.main-cover{
+    margin-left: 20px;
+    margin-right: 20px;
+    /* background-color: yellowgreen; */
+    background-image: url(5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 5; */
+    /* filter: grayscale(150%); */
+    /* background-color: red; */
+    /* filter: contrast(10%); */
+    /* background-color: rebeccapurple; */
+    height: 80vh; 
  }
  .main-text{
+     /* color: black; */
+     color: #ffffff;
      display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
      padding-top: 100px;
  }
- main h2{
+ .main-text h2{
+    color: #ffffff;
+
      margin-bottom: 0;
      font-family: var(--josefin);
  }
- main h1{
+ .main-text h1{
      margin-top: 5px;
      font-family: var(--lexend);
      font-size: 35px;
  }
- main button{
+ .main-text button{
      /* background-color: var(--mid-night); */
      width: 10rem;
      padding: 1.2rem;
      border: none;
-     /* color: white; */
+    /* border: 2px solid black; */
      background-color: white;
-     color: black;
+     color: var(--text-grey);
+     font-weight: bolder;
      font-family: var(--lexend);
+     font-size: 15px;
 }
-main button:hover{
+.main-text button:hover{
     color: white;
     background-color: transparent;
     border: 2px solid white;
+    /* border: 2px solid black; */
     font-size: 20px;
 }
 .blog{
@@ -162,8 +182,13 @@ main button:hover{
     font-size: 14px;
 }
 .section3{
-    margin: 5rem 5rem;
+    margin: 4rem 4rem;
     
+}
+.posts{
+    /* border: 2px solid rebeccapurple; */
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .postImg{
     position: relative;
@@ -177,12 +202,14 @@ main button:hover{
     transition: all 1s ease;
 }
 .img>img:hover{
+    /* width: 80%; */
+
     transform: scale(1.3);
 }
 .siteContent{
-    /* border: 1px solid red; */
+    /* border: 5px solid red; */
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 60% 40%;
 }
 .posts{
     padding: 25px;
@@ -196,31 +223,39 @@ main button:hover{
 .sidebar{
     padding-left: 50px;
 }
-.postContent hr{
-    margin-bottom: 20px;
+.postContent {
+    margin-bottom: 50px;
 }
+
 .postInfo{
-        background-color: var(--sky);
-        border-radius: 50px;
-        width: 20rem;
-        padding: 1rem;
-        color: gainsboro;
-        font-size: 14px;
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        bottom: -5%;
-        text-align: center;
-        /* margin: 1rem; */
+    background-color: var(--sky);
+    /* background-color: rgb(35, 136, 136); */
+    border-radius: 50px;
+    width: 20rem;
+    padding: .6rem .1rem;
+    border: 2px solid white;
+    color: #fff;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0%;
+    right: 0;
+    bottom: -5%;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    /* background-color: rgb(235, 107, 107);   */
+    /* background-color: rgb(238, 133, 133);   */
+    /* margin: 1rem; */
 }
 .postInfo span{
     font-family: var(--abelFonts);
     margin: 0.5rem;
 }
 .post-title{
-    padding-top: 3rem;
+    border: .1px solid gainsboro;
+    border-top: none;
+    padding: 3rem 1rem; 
     color: var(--text-grey);
     font-family: var(--anton);
     padding-bottom: 1rem;
@@ -241,10 +276,11 @@ main button:hover{
     background-color: var(--sky);
     font-family: var(--lexend);
     font-weight:300;
+    /* background-color: var(--text-grey); */
 }
 .post-title button a{
     font-size: 15px;
-    color: gainsboro;
+    color: #fff;
     text-decoration: none;
 }
 .post-title button:hover{
@@ -451,4 +487,1185 @@ main button:hover{
 
 .Footerline a{
     color: #fff;
+}
+
+
+
+
+
+@media screen and (max-width: 1050px) {
+    .section3{
+        margin: 2.5rem 2.5rem;
+        
+    }
+    .siteContent{
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+    .posts{
+        /* background-color: red; */
+        padding: 20px;
+    }
+    /* .posts h1{
+        text-align: center;
+        font-family: var(--josefin);
+        font-weight: bolder;
+    } */
+    /* .sidebar{
+        padding-left: 50px;
+    }
+    .postContent hr{
+        margin-bottom: 20px;
+    } */
+    .postInfo{
+            /* border-radius: 50px; */
+            width: 15rem;
+            padding: 1rem;
+            font-size: 14px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            bottom: -5%;
+            text-align: center;
+            /* margin: 1rem; */
+    }
+    .postInfo span{
+        /* font-family: var(--abelFonts); */
+        margin: 0.3rem;
+    }
+    .post-title{
+        padding-top: 3rem;
+        color: var(--text-grey);
+        font-family: var(--anton);
+        padding-bottom: 1rem;
+    }
+    /* .post-title a{
+        text-decoration: none;
+        color: var(--text-grey);
+        font-size: 25px;
+    }
+    .post-title p{
+        font-weight: lighter;
+        font-family: var(--abelFonts);
+    } */
+    .post-title button{
+        /* width: 8rem; */
+        padding: 0.8rem;
+        /* border: none;
+        background-color: var(--sky);
+        font-family: var(--lexend);
+        font-weight:300; */
+    }
+    /* .post-title button a{
+        font-size: 15px;
+        color: gainsboro;
+        text-decoration: none;
+    } */
+    /* .post-title button:hover{
+        transform: scale(1.05);
+    }
+    .createPost button a{
+        color: #fff;
+    } */
+    /* .createPost button{
+        width: 20rem;
+        font-size: 20px;
+        font-family: var(--lexend);
+        padding: 1rem;
+        background-color: var(--sky);
+        border: none;
+    }
+     */
+    /* .catagory{
+        margin-top: 100px;
+        font-family: var(--josefin);
+        margin-bottom: 100px;
+    } */
+    /* .catagory ul{
+        padding-left: 0px;
+        padding-top: 0;
+    } */
+    /* .catagorylist{
+        display: flex;
+        flex-direction: column;
+    } */
+    
+    .list-item{
+        /* display: flex; */
+        /* justify-content:space-between; */
+        /* background-color: var(--sky); */
+        /* margin: 5px 0; */
+        padding: 7px;
+        /* border-radius: 20px; */
+        /* color: gainsboro; */
+        /* font-family: var(--abelFonts); */
+    
+    }
+    /* .list-item a{
+        color: gainsboro;
+        font-family: var(--abelFonts);
+    }
+     */
+    /* css for popular post blow*/
+    
+    .popularPost{
+        /* font-family: var(--josefin); */
+        padding: 0px;
+        /* background-color: red; */
+        margin-top: 0px;
+    }
+    .popularPost-content{
+        margin-bottom: 50px;
+    }
+    /* .popularPost-img{
+        position: relative;
+    } */
+    /* .popularImage{
+        overflow: hidden;
+    } */
+
+    .popularImage>img{
+        /* object-fit: cover; */
+        width: 130%;
+        /* transition: all 1s ease; */
+    }
+    /* .popularImage>img:hover{
+        transform: scale(1.2);
+    } */
+    .popularPost-info {
+        /* position: absolute; */
+        /* left: 0; */
+        /* bottom: -12%; */
+        /* overflow: visible; */
+        /* background-color: white; */
+        /* color:var(--text-grey);    */
+        font-size: 12px;
+        /* text-align: left; */
+        padding: 6px;
+        /* font-family: var(--abelFonts); */
+    }
+    
+    /* .popularPost-title{
+        padding-top: 20px;
+    }
+    .popularPost-title a{
+        text-decoration: none;
+        color: var(--text-grey);
+        font-size: 15px;
+        font-family: var(--anton);
+    } */
+    
+    /* newsLettter styling starts from here */
+    .newsLetter{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--josefin);
+        /* margin: -10px 0; */
+        margin-bottom: 0;
+
+    }
+    .newsLetter-input input{
+        /* border: 1px solid var(--text-grey); */
+        width: 80%;
+        padding: 0.6rem;
+        margin: 10px 0;
+        /* font-family: var(--abelFonts); */
+    }
+    /* .newsLetter-input input:focus{
+        outline: none;
+    } */
+    /* .newsLetter-input input::placeholder{
+        font-family: var(--lexend);
+    } */
+    .newsLetter-btn button{
+        width: 90%;
+        padding: 0.5rem;
+        /* font-family: var(--abelFonts); */
+        font-size: 16px;
+        /* border: none; */
+        /* color: #fff; */
+        /* background-color: var(--sky); */
+    }
+    /* newsLetter styling ended here */
+    
+    /* popularTag styling is below */
+    .popularTags{
+        /* font-family: var(--josefin); */
+        margin-top: 10px;
+    }
+    /* .tags{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+    } */
+    .tag{
+        padding: 0.5rem;
+        background-color: var(--sky);
+        margin: 5px 5px;
+        color: #fff;
+        font-weight: 200;
+        font-family: var(--abelFonts);
+        border-radius: 10px;
+        font-size: 15px;
+    }
+  } 
+
+  /* for footer */
+@media screen and (max-width: 950px){
+    /* footer styling begins here */
+.footer-wrapper{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "one two three" "four four four";
+    background-color: rgb(20, 18, 18); */
+    /* background-color: red; */
+    /* color:#fff;
+    font-family: var(--abelFonts); */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    font-weight: 400;
+}
+.Aboutus{
+    grid-area: one;
+}
+.Aboutus p{
+    color: var(--text-grey);
+    padding-right: 30px;
+    font-size: 12px;
+}
+/* .Newsletter{
+    grid-area: two;
+} */
+.Newsletter p{
+    color: var(--text-grey);
+    font-size: 12px;
+
+}
+/* .Newsletter input{
+    width: 10rem;
+    padding: 0.6rem;
+    font-family: var(--lexend);
+    color: var(--text-grey);
+    border: none;
+} */
+/* .Newsletter input:focus{
+    outline: none;
+} */
+/* .Newsletter input::placeholder{
+    font-family: var(--lexend);
+} */
+.Followus{
+    grid-area: three;
+    /* padding-left: 60px; */
+}
+.Followus p{
+    /* color: var(--text-grey); */
+    font-size: 12px;
+}
+.Followus a{
+    /* color: white; */
+    margin: 4px;
+}
+/* .Footerline{
+    grid-area: four;
+    text-align: center;
+    font-weight: lighter;
+    color: var(--text-grey);
+}
+
+.Footerline a{
+    color: #fff;
+} */
+
+}
+  
+@media screen and (max-width: 880px) {
+    /* .section3{
+        margin: 2.5rem 2.5rem;
+        
+    }
+    .siteContent{
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+    .posts{
+        background-color: red;
+        padding: 20px;
+    } */
+    /* .posts h1{
+        text-align: center;
+        font-family: var(--josefin);
+        font-weight: bolder;
+    } */
+    /* .sidebar{
+        padding-left: 50px;
+    }
+    .postContent hr{
+        margin-bottom: 20px;
+    } */
+    /* .postInfo{
+            border-radius: 50px;
+            width: 15rem;
+            padding: 1rem;
+            font-size: 14px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            bottom: -5%;
+            text-align: center;
+            margin: 1rem;
+    } */
+    /* .postInfo span{
+        font-family: var(--abelFonts);
+        margin: 0.3rem;
+    } */
+    /* .post-title{
+        padding-top: 3rem;
+        color: var(--text-grey);
+        font-family: var(--anton);
+        padding-bottom: 1rem;
+    } */
+    /* .post-title a{
+        text-decoration: none;
+        color: var(--text-grey);
+        font-size: 25px;
+    }
+    .post-title p{
+        font-weight: lighter;
+        font-family: var(--abelFonts);
+    } */
+    /* .post-title button{
+        width: 8rem;
+        padding: 0.8rem;
+        border: none;
+        background-color: var(--sky);
+        font-family: var(--lexend);
+        font-weight:300;
+    } */
+    /* .post-title button a{
+        font-size: 15px;
+        color: gainsboro;
+        text-decoration: none;
+    } */
+    /* .post-title button:hover{
+        transform: scale(1.05);
+    }
+    .createPost button a{
+        color: #fff;
+    } */
+    /* .createPost button{
+        width: 20rem;
+        font-size: 20px;
+        font-family: var(--lexend);
+        padding: 1rem;
+        background-color: var(--sky);
+        border: none;
+    }
+     */
+     .sidebar{
+         /* background-color: red; */
+        padding-left: 25px;
+    }
+    .catagory{
+        /* margin-top: 100px; */
+        font-size: 15px;
+        /* color: red; */
+        /* font-family: var(--josefin); */
+        /* margin-bottom: 100px; */
+    }
+    /* .catagory ul{
+        padding-left: 0px;
+        padding-top: 0;
+    } */
+    /* .catagorylist{
+        display: flex;
+        flex-direction: column;
+    } */
+    
+    /* .list-item{
+        display: flex;
+        justify-content:space-between;
+        background-color: var(--sky);
+        margin: 5px 0;
+        padding: 7px;
+        border-radius: 20px;
+        color: gainsboro;
+        font-family: var(--abelFonts);
+    
+    } */
+    /* .list-item a{
+        color: gainsboro;
+        font-family: var(--abelFonts);
+    } */
+    
+    /* css for popular post blow*/
+    
+    /* .popularPost{
+        font-family: var(--josefin);
+        padding: 0px;
+        background-color: red;
+        margin-top: 0px; */
+    /* } */
+    /* .popularPost-content{
+        margin-bottom: 50px;
+    } */
+    /* .popularPost-img{
+        position: relative;
+    } */
+    /* .popularImage{
+        overflow: hidden;
+    } */
+
+    /* .popularImage>img{ */
+        /* object-fit: cover; */
+        /* width: 130%; */
+        /* transition: all 1s ease; */
+    /* } */
+    /* .popularImage>img:hover{
+        transform: scale(1.2);
+    } */
+    /* .popularPost-info { */
+        /* position: absolute; */
+        /* left: 0; */
+        /* bottom: -12%; */
+        /* overflow: visible; */
+        /* background-color: white; */
+        /* color:var(--text-grey);    */
+        /* font-size: 12px; */
+        /* text-align: left; */
+        /* padding: 6px; */
+        /* font-family: var(--abelFonts); */
+    /* } */
+    
+    /* .popularPost-title{
+        padding-top: 20px;
+    }
+    .popularPost-title a{
+        text-decoration: none;
+        color: var(--text-grey);
+        font-size: 15px;
+        font-family: var(--anton);
+    } */
+    
+    /* newsLettter styling starts from here */
+    /* .newsLetter{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--josefin);
+        margin: -10px 0;
+        margin-bottom: 0;
+
+    } */
+    /* .newsLetter-input input{ */
+        /* border: 1px solid var(--text-grey); */
+        /* width: 80%; */
+        /* padding: 0.6rem; */
+        /* margin: 10px 0; */
+        /* font-family: var(--abelFonts); */
+    /* } */
+    /* .newsLetter-input input:focus{
+        outline: none;
+    } */
+    /* .newsLetter-input input::placeholder{
+        font-family: var(--lexend);
+    } */
+    /* .newsLetter-btn button{ */
+        /* width: 90%; */
+        /* padding: 0.5rem; */
+        /* font-family: var(--abelFonts); */
+        /* font-size: 16px; */
+        /* border: none; */
+        /* color: #fff; */
+        /* background-color: var(--sky); */
+    /* } */
+    /* newsLetter styling ended here */
+    
+    /* popularTag styling is below */
+    /* .popularTags{ */
+        /* font-family: var(--josefin); */
+        /* margin-top: 10px; */
+    /* } */
+    /* .tags{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+    } */
+    /* .tag{
+        padding: 0.5rem;
+        background-color: var(--sky);
+        margin: 5px 5px;
+        color: #fff;
+        font-weight: 200;
+        font-family: var(--abelFonts);
+        border-radius: 10px;
+        font-size: 15px;
+    } */
+  }
+@media screen and (max-width: 810px) {
+    /* .section3{
+        margin: 2.5rem 2.5rem;
+        
+    }
+    .siteContent{
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+    .posts{
+        background-color: red;
+        padding: 20px;
+    } */
+    /* .posts h1{
+        text-align: center;
+        font-family: var(--josefin);
+        font-weight: bolder;
+    } */
+    /* .sidebar{
+        padding-left: 50px;
+    }
+    .postContent hr{
+        margin-bottom: 20px;
+    } */
+    /* .postInfo{
+            border-radius: 50px;
+            width: 15rem;
+            padding: 1rem;
+            font-size: 14px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            bottom: -5%;
+            text-align: center;
+            margin: 1rem;
+    } */
+    /* .postInfo span{
+        font-family: var(--abelFonts);
+        margin: 0.3rem;
+    } */
+    /* .post-title{
+        padding-top: 3rem;
+        color: var(--text-grey);
+        font-family: var(--anton);
+        padding-bottom: 1rem;
+    } */
+    /* .post-title a{
+        text-decoration: none;
+        color: var(--text-grey);
+        font-size: 25px;
+    }
+    .post-title p{
+        font-weight: lighter;
+        font-family: var(--abelFonts);
+    } */
+    /* .post-title button{
+        width: 8rem;
+        padding: 0.8rem;
+        border: none;
+        background-color: var(--sky);
+        font-family: var(--lexend);
+        font-weight:300;
+    } */
+    /* .post-title button a{
+        font-size: 15px;
+        color: gainsboro;
+        text-decoration: none;
+    } */
+    /* .post-title button:hover{
+        transform: scale(1.05);
+    }
+    .createPost button a{
+        color: #fff;
+    } */
+    /* .createPost button{
+        width: 20rem;
+        font-size: 20px;
+        font-family: var(--lexend);
+        padding: 1rem;
+        background-color: var(--sky);
+        border: none;
+    }
+     */
+     .sidebar{
+         /* background-color: red; */
+        padding-left: 25px;
+    }
+    .catagory{
+        /* margin-top: 100px; */
+        font-size: 15px;
+        /* color: red; */
+        /* font-family: var(--josefin); */
+        /* margin-bottom: 100px; */
+    }
+    /* .catagory ul{
+        padding-left: 0px;
+        padding-top: 0;
+    } */
+    /* .catagorylist{
+        display: flex;
+        flex-direction: column;
+    } */
+    
+    /* .list-item{
+        display: flex;
+        justify-content:space-between;
+        background-color: var(--sky);
+        margin: 5px 0;
+        padding: 7px;
+        border-radius: 20px;
+        color: gainsboro;
+        font-family: var(--abelFonts);
+    
+    } */
+    /* .list-item a{
+        color: gainsboro;
+        font-family: var(--abelFonts);
+    } */
+    
+    /* css for popular post blow*/
+    
+    /* .popularPost{
+        font-family: var(--josefin);
+        padding: 0px;
+        background-color: red;
+        margin-top: 0px;
+    } */
+    /* .popularPost-content{
+        margin-bottom: 50px;
+    } */
+    /* .popularPost-img{
+        position: relative;
+    } */
+    /* .popularImage{
+        overflow: hidden;
+    } */
+
+    /* .popularImage>img{ */
+        /* object-fit: cover; */
+        /* width: 130%; */
+        /* transition: all 1s ease; */
+    /* } */
+    /* .popularImage>img:hover{
+        transform: scale(1.2);
+    } */
+    .popularPost-info {
+        /* position: absolute; */
+        /* left: 0; */
+        /* bottom: -12%; */
+        /* overflow: visible; */
+        /* background-color: white; */
+        /* color:var(--text-grey);    */
+        font-size: 10px;
+        /* text-align: left; */
+        padding: 10px;
+        /* font-family: var(--abelFonts); */
+    }
+    
+    /* .popularPost-title{
+        padding-top: 20px;
+    }
+    .popularPost-title a{
+        text-decoration: none;
+        color: var(--text-grey);
+        font-size: 15px;
+        font-family: var(--anton);
+    } */
+    
+    /* newsLettter styling starts from here */
+    /* .newsLetter{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--josefin);
+        margin: -10px 0;
+        margin-bottom: 0;
+
+    } */
+    /* .newsLetter-input input{ */
+        /* border: 1px solid var(--text-grey); */
+        /* width: 80%; */
+        /* padding: 0.6rem; */
+        /* margin: 10px 0; */
+        /* font-family: var(--abelFonts); */
+    /* } */
+    /* .newsLetter-input input:focus{
+        outline: none;
+    } */
+    /* .newsLetter-input input::placeholder{
+        font-family: var(--lexend);
+    } */
+    /* .newsLetter-btn button{ */
+        /* width: 90%; */
+        /* padding: 0.5rem; */
+        /* font-family: var(--abelFonts); */
+        /* font-size: 16px; */
+        /* border: none; */
+        /* color: #fff; */
+        /* background-color: var(--sky); */
+    /* } */
+    /* newsLetter styling ended here */
+    
+    /* popularTag styling is below */
+    .popularTags{
+        font-family: var(--josefin);
+        margin-top: 10px;
+    }
+    .tags{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .tag{
+        padding: 0.5rem;
+        background-color: var(--sky);
+        margin: 4px 3px;
+        color: #fff;
+        font-weight: 200;
+        font-family: var(--abelFonts);
+        border-radius: 8px;
+        font-size: 12px;
+    }
+  }
+@media screen and (max-width: 700px) {
+    .nav-brand{
+        padding: 1rem 0.6rem;
+        font-size: 24px;
+    }
+  
+    .nav-links{
+        padding: 0.1rem 0.6rem;
+    }
+   .social-links{
+        padding: 0.1rem 0.6rem;
+    }
+    .social-links a{
+        font-size: 14px;
+        color: var(--text-grey);
+        padding: 0rem 0.2rem;
+    }
+    /* .section3{
+        margin: 2.5rem 2.5rem;
+    } */
+    .siteContent{
+        /* border: 1px solid red; */
+        /* display: grid; */
+        grid-template-columns: none;
+        grid-template-rows: auto;
+    }
+    /* .posts{
+        background-color: red;
+        padding: 20px;
+    } */
+    /* .posts h1{
+        text-align: center;
+        font-family: var(--josefin);
+        font-weight: bolder;
+    } */
+    /* .sidebar{
+        padding-left: 50px;
+    }
+    .postContent hr{
+        margin-bottom: 20px;
+    } */
+    /* .postInfo{
+            border-radius: 50px;
+            width: 15rem;
+            padding: 1rem;
+            font-size: 14px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            bottom: -5%;
+            text-align: center;
+            margin: 1rem;
+    } */
+    /* .postInfo span{
+        font-family: var(--abelFonts);
+        margin: 0.3rem;
+    } */
+    /* .post-title{
+        padding-top: 3rem;
+        color: var(--text-grey);
+        font-family: var(--anton);
+        padding-bottom: 1rem;
+    } */
+    /* .post-title a{
+        text-decoration: none;
+        color: var(--text-grey);
+        font-size: 25px;
+    }
+    .post-title p{
+        font-weight: lighter;
+        font-family: var(--abelFonts);
+    } */
+    /* .post-title button{
+        width: 8rem;
+        padding: 0.8rem;
+        border: none;
+        background-color: var(--sky);
+        font-family: var(--lexend);
+        font-weight:300;
+    } */
+    /* .post-title button a{
+        font-size: 15px;
+        color: gainsboro;
+        text-decoration: none;
+    } */
+    /* .post-title button:hover{
+        transform: scale(1.05);
+    }
+    .createPost button a{
+        color: #fff;
+    } */
+    /* .createPost button{
+        width: 20rem;
+        font-size: 20px;
+        font-family: var(--lexend);
+        padding: 1rem;
+        background-color: var(--sky);
+        border: none;
+    }
+     */
+
+    .sidebar{
+         /* border: red; */
+         /* border-bottom: red; */
+        display: grid;
+        grid-template-columns: 80%;
+        justify-content: center;         
+         /* background-color: red; */
+        /* padding-left: 25px; */
+    }
+    .catagory{
+        /* margin-top: 100px; */
+        font-size: 15px;
+        /* color: red; */
+        /* font-family: var(--josefin); */
+        /* margin-bottom: 100px; */
+    }
+    /* .catagory ul{
+        padding-left: 0px;
+        padding-top: 0;
+    
+    } */
+    /* .catagorylist{
+        display: flex;
+        flex-direction: column;
+    } */
+    
+    /* .list-item{
+        display: flex;
+        justify-content:space-between;
+        background-color: var(--sky);
+        margin: 5px 0;
+        padding: 7px;
+        border-radius: 20px;
+        color: gainsboro;
+        font-family: var(--abelFonts);
+    
+    } */
+    /* .list-item a{
+        color: gainsboro;
+        font-family: var(--abelFonts);
+    } */
+    
+    /* css for popular post blow*/
+    
+    /* .popularPost{
+        font-family: var(--josefin);
+        padding: 0px;
+        background-color: red;
+        margin-top: 0px;
+    } */
+    .popularPost-content{
+        margin-bottom: 50px;
+    }
+    /* .popularPost-img{
+        position: relative;
+    } */
+    /* .popularImage{
+        overflow: hidden;
+    } */
+
+    .popularImage>img{
+        /* object-fit: cover; */
+        width: 100%;
+        /* transition: all 1s ease; */
+    }
+    /* .popularImage>img:hover{
+        transform: scale(1.2);
+    } */
+    .popularPost-info {
+        /* position: absolute; */
+        /* left: 0; */
+        /* bottom: -12%; */
+        /* overflow: visible; */
+        /* background-color: white; */
+        /* color:var(--text-grey);    */
+        font-size: 15px;
+        /* text-align: left; */
+        /* padding: 6px; */
+        /* font-family: var(--abelFonts); */
+    }
+    
+    .popularPost-title{
+        padding-top: 30px;
+    }
+    /* .popularPost-title a{
+        text-decoration: none;
+        color: var(--text-grey);
+        font-size: 15px;
+        font-family: var(--anton);
+    } */
+    
+    /* newsLettter styling starts from here */
+    .newsLetter{
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--josefin);
+        margin: -10px 0;
+        margin-bottom: 50px;
+
+    }
+    /* .newsLetter-input input{ */
+        /* border: 1px solid var(--text-grey); */
+        /* width: 80%; */
+        /* padding: 0.6rem; */
+        /* margin: 10px 0; */
+        /* font-family: var(--abelFonts); */
+    /* } */
+    /* .newsLetter-input input:focus{
+        outline: none;
+    } */
+    /* .newsLetter-input input::placeholder{
+        font-family: var(--lexend);
+    } */
+    /* .newsLetter-btn button{ */
+        /* width: 90%; */
+        /* padding: 0.5rem; */
+        /* font-family: var(--abelFonts); */
+        /* font-size: 16px; */
+        /* border: none; */
+        /* color: #fff; */
+        /* background-color: var(--sky); */
+    /* } */
+    /* newsLetter styling ended here */
+    
+    /* popularTag styling is below */
+    .popularTags{
+        /* font-family: var(--josefin); */
+        /* margin-top: 10px; */
+        margin-bottom: 50px;
+    }
+    /* .tags{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .tag{
+        padding: 0.5rem;
+        background-color: var(--sky);
+        margin: 5px 5px;
+        color: #fff;
+        font-weight: 200;
+        font-family: var(--abelFonts);
+        border-radius: 10px;
+        font-size: 15px;
+    } */
+  }
+  @media screen and (max-width: 680px){
+    .flex-row{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    nav{
+        width: 100%;
+        height: 350px;
+        /* background-color: palevioletred;     */
+    }
+    .nav-brand{
+        color: var(--text-grey);
+        font-size: 25px;
+        font-family: var(--abelFonts);
+    }
+    .nav-brand a{
+        color: var(--text-grey);
+    }
+    
+    .nav-items{
+        font-family: var(--abelFonts);
+        font-weight: bolder;
+        display: flex;
+        flex-direction: none;
+        flex-direction: column;
+    }
+    .nav-links{
+        margin: 5px;
+        margin-left: 0;
+    }  
+    .nav-links a{
+        color: var(--text-grey);
+    }
+    .nav-links:hover{
+        background-color: var(--mid-night);
+    }
+    .nav-links:hover a{
+        color: white;
+    }
+    .social-links{
+        text-align: center;
+        padding-left: 50px;
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+
+    .social-links a{
+        color: var(--text-grey);
+        font-size: 20px;
+    }
+    .toggle-collapse{
+        display: inline;
+    }
+    /* .section3{
+        margin: 2.5rem 2.5rem;
+    } */
+    .siteContent{
+        /* border: 1px solid red; */
+        /* display: grid; */
+        grid-template-columns: none;
+        grid-template-rows: auto;
+    }    
+    /* footer styling begins here */
+.footer-wrapper{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "one two three" "four four four";
+    background-color: rgb(20, 18, 18); */
+    /* background-color: red; */
+    /* color:#fff;
+    font-family: var(--abelFonts); */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    font-weight: 400;
+}
+.Aboutus{
+    grid-area: one;
+}
+.Aboutus p{
+    color: var(--text-grey);
+    padding-right: 30px;
+    font-size: 11px;
+}
+.Aboutus h2{
+    font-size: 20px;
+}
+.Newsletter{
+    grid-area: two;
+}
+.Newsletter p{
+    color: var(--text-grey);
+    font-size: 11px;
+
+}
+.Newsletter h2{
+    font-size: 20px;
+}
+.Newsletter input{
+    width: 6rem;
+    padding: 0.2rem;
+    font-family: var(--lexend);
+    color: var(--text-grey);
+    border: none;
+}
+/* .Newsletter input:focus{
+    outline: none;
+} */
+.Newsletter input::placeholder{
+    font-family: var(--lexend);
+    font-size: 10px;
+}
+.Followus{
+    grid-area: three;
+    /* padding-left: 60px; */
+}
+.Followus p{
+    /* color: var(--text-grey); */
+    font-size: 11px;
+}
+.Followus h2{
+    font-size: 20px;
+}
+.Followus a{
+    /* color: white; */
+    margin: 4px;
+}
+/* .Footerline{
+    grid-area: four;
+    text-align: center;
+    font-weight: lighter;
+    color: var(--text-grey);
+}
+
+.Footerline a{
+    color: #fff;
+} */
+
+}
+    /* for footer */
+@media screen and (max-width: 500px){
+    /* footer styling begins here */
+.footer-wrapper{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.Aboutus p{
+    color: var(--text-grey);
+    padding-right: 30px;
+    font-size: 10px;
+}
+.Aboutus h2{
+    font-size: 18px;
+}
+.Newsletter p{
+    color: var(--text-grey);
+    font-size: 10px;
+
+}
+.Newsletter h2{
+    font-size: 18px;
+}
+.Newsletter input{
+    width: 5rem;
+    padding: 0.1rem;
+    font-family: var(--lexend);
+    color: var(--text-grey);
+    border: none;
+}
+.Followus p{
+    font-size: 10px;
+}
+.Followus h2{
+    font-size: 18px;
+}
+.Followus a{
+    margin: 4px;
+    font-size: 12px;
+}
 }
