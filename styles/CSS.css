@@ -6,8 +6,7 @@
     --white:#ffffff;
     --mid-night: #104f55;
 
-        /* gradient color   */
-     
+    /* gradient color   */ 
     /* --sky:  rgb(247, 95, 95); */
     --sky: #4390AC;
 
@@ -253,7 +252,7 @@ nav{
     margin: 0.5rem;
 }
 .post-title{
-    border: .1px solid gainsboro;
+    border: 1px solid #eee;
     border-top: none;
     padding: 3rem 1rem; 
     color: var(--text-grey);
@@ -305,7 +304,7 @@ nav{
 }
 .catagory ul{
     padding-left: 0px;
-    padding-top: 0;
+    padding-top: 0px;
 }
 .catagorylist{
     display: flex;
@@ -314,17 +313,19 @@ nav{
 
 .list-item{
     display: flex;
-    justify-content:space-between;
-    background-color: var(--sky);
-    margin: 5px 0;
+    justify-content: flex-start;
+    /* background-color: var(--sky); */
+    margin: 0 0;
     padding: 8px;
     border-radius: 20px;
-    color: gainsboro;
+    /* color: gainsboro; */
+    color: black;
     font-family: var(--abelFonts);
 
 }
 .list-item a{
-    color: gainsboro;
+    /* color: gainsboro; */
+    color: black;
     font-family: var(--abelFonts);
 }
 
@@ -337,6 +338,9 @@ nav{
 }
 .popularPost-content{
     margin-bottom: 50px;
+    /* padding: 10px; */
+    border: 1px solid #eee;
+
 }
 .popularPost-img{
     position: relative;
@@ -367,7 +371,7 @@ nav{
 }
 
 .popularPost-title{
-    padding-top: 20px;
+    padding: 20px 8px;
 }
 .popularPost-title a{
     text-decoration: none;
